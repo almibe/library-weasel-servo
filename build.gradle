@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'org.dm.gradle:gradle-bundle-plugin:0.6.2'
+        classpath 'org.libraryweasel:library-weasel-gradle-plugin:0.0.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'org.libraryweasel.gradleplugin'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.libraryweasel:library-weasel-plugin-api:0.1.0-SNAPSHOT'
+    compile 'org.apache.felix:org.apache.felix.dependencymanager:3.1.0'
+}
+
+bundle {
+    instruction 'Import-Package', '*'
+    instruction 'Export-Package', 'org.libraryweasel.servo.*'
+}
