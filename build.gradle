@@ -19,7 +19,6 @@ repositories {
 }
 
 dependencies {
-    compile libraryWeaselPluginApiDep
     compile felixDependencyManagerDep
 }
 
