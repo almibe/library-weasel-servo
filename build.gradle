@@ -9,6 +9,7 @@ buildscript {
     }
 }
 
+apply plugin: 'org.almibe.easypubplugin'
 apply plugin: 'org.libraryweasel.gradleplugin'
 
 group 'org.libraryweasel'
